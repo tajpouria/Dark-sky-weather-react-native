@@ -3,6 +3,4 @@ import dataReducer from "./data";
 
 export default combineReducers({
   data: dataReducer
-  // summary : summaryReucer,
-  // temperature : temperatureReducer
 });
