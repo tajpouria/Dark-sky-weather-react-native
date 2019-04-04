@@ -10,7 +10,10 @@ class Request extends Component {
       .get(
         "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/5a72f38ca1adfa304e19c11586d8ca26/35.6892,51.3890"
       )
-      .then(res => this.props.city(res.data))
+      .then(res => {
+        console.log(res.data);
+        this.props.dataAction(res.data);
+      })
       .catch(err => console.log(err));
   }
   render() {

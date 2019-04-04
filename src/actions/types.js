@@ -1,1 +1,1 @@
-export const CITY = "city";
+export const C = "c";

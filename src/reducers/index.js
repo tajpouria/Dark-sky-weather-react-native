@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import cityReducer from "./city";
+import dataReducer from "./data";
 
 export default combineReducers({
-  city: cityReducer
+  data: dataReducer
+  // summary : summaryReucer,
+  // temperature : temperatureReducer
 });

@@ -1,5 +1,5 @@
-import { CITY } from "./types";
+import { C } from "./types";
 
-export const city = data => {
-  return { type: CITY, payload: data.timezone };
+export const dataAction = data => {
+  return { type: C, payload: data };
 };

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
 import { connect } from "react-redux";
-import Request from "./Request";
-import Home from "./home/Home";
-class Parser extends Component {
+
+class Home extends Component {
   render() {
+    console.log(this.props);
+    const { city, icon } = this.props.state.data;
     return (
       <View>
-        <Request />
-        <Text>{this.props.state.city}</Text>
-        <Home />
+        <Text>city::{city}</Text>
+        <Text>icon::{icon}</Text>
       </View>
     );
   }
@@ -19,4 +19,4 @@ const mapStateToProps = state => {
   return { state };
 };
 
-export default connect(mapStateToProps)(Parser);
+export default connect(mapStateToProps)(Home);
