@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import { View } from "react-native";
-import axios from "axios";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 
 class Request extends Component {
   componentWillMount() {
-    axios
-      .get(
-        "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/5a72f38ca1adfa304e19c11586d8ca26/35.6892,51.3890"
-      )
-      .then(res => {
-        console.log(res.data);
-        this.props.dataAction(res.data);
-      })
-      .catch(err => console.log(err));
+    this.props.dataAction();
   }
   render() {
     return <View />;
