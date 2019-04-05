@@ -1,24 +1,21 @@
 import React, { Component } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { connect } from "react-redux";
-import { unix } from "moment";
+import HourTile from "./HourTile";
 
 import renderIcon from "../renderIcon";
 
 class Forecast extends Component {
-  unixTimeConvetor(number) {
-    var day = unix(number);
-    return day._d.toString();
-  }
   render() {
     const { icon } = this.props.state.data;
     return (
       <View>
         <Text> Forecast </Text>
-        <Text>{this.unixTimeConvetor(1554453000)}</Text>
-        <Image
-          style={{ height: 50, width: 50 }}
-          source={require(`../../icons/${this.props.renderIcon}`)}
+        <FlatList
+          data={[1, 2, 3, 4, 5, 6]}
+          renderItem={({ item }) => (
+            <HourTile src={require(`../../icons/${this.props.renderIcon}`)} />
+          )}
         />
       </View>
     );
