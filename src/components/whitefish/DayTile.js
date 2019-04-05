@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { View, Text, Image } from "react-native";
 import { unix } from "moment";
 
-import renderIcon from "../renderIcon";
-
 export default class HourTile extends Component {
   unixTimeConvetor(number) {
     var day = unix(number);

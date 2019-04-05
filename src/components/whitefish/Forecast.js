@@ -3,8 +3,6 @@ import { View, Text, FlatList } from "react-native";
 import { connect } from "react-redux";
 import HourTile from "./HourTile";
 
-import renderIcon from "../renderIcon";
-
 class Forecast extends Component {
   render() {
     return (
@@ -17,7 +15,6 @@ class Forecast extends Component {
               icon={this.props.state.data.hourly[item].icon}
               temprature={this.props.state.data.hourly[item].temperature}
               date={this.props.state.data.hourly[item].time}
-              src={require(`../../icons/${this.props.renderIcon}`)}
             />
           )}
           keyExtractor={i => {
@@ -32,4 +29,4 @@ class Forecast extends Component {
 const mapStateToProps = state => {
   return { state };
 };
-export default connect(mapStateToProps)(renderIcon(Forecast));
+export default connect(mapStateToProps)(Forecast);
