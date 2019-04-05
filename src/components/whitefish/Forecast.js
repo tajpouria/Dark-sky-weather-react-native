@@ -7,7 +7,6 @@ import renderIcon from "../renderIcon";
 
 class Forecast extends Component {
   render() {
-    console.log(this.props);
     return (
       <View>
         <Text> Forecast </Text>

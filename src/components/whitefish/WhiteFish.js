@@ -11,9 +11,9 @@ export default class WhiteFish extends Component {
     return (
       <View>
         <Text> ........................................... </Text>
-        {/* <Forecast /> */}
+        <Forecast />
         <Text>---------------------------------------------------</Text>
-        {/* <WeekDays /> */}
+        <WeekDays />
         <Details />
       </View>
     );

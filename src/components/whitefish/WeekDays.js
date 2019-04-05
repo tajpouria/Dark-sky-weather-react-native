@@ -7,13 +7,13 @@ import DayTile from "./DayTile";
 
 class WeekDay extends Component {
   render() {
-    console.log(this.props);
     return (
       <View>
         <FlatList
           data={[0, 1, 2, 3, 4]}
           renderItem={({ item }) => (
             <DayTile
+              icon={this.props.state.data.daily[item].icon}
               maxtemprature={
                 this.props.state.data.daily[item].apparentTemperatureMax
               }
@@ -24,6 +24,7 @@ class WeekDay extends Component {
               src={require(`../../icons/${this.props.renderIcon}`)}
             />
           )}
+          keyExtractor={item => item.toString()}
         />
       </View>
     );

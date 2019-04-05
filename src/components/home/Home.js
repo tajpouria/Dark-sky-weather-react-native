@@ -8,7 +8,6 @@ class Home extends Component {
   render() {
     const {
       city,
-      icon,
       temperature,
       apparentTemperatureMin,
       apparentTemperatureMax
@@ -24,7 +23,6 @@ class Home extends Component {
         5- powered by dark cload should be added 
         */}
         <Text>city::{city}</Text>
-        <Text>icon::{icon}</Text>
         <Text>tempratue::{temperature}</Text>
         <Text>min temp::{apparentTemperatureMax}</Text>
         <Text>max temp::{apparentTemperatureMin}</Text>

@@ -7,6 +7,8 @@ export default ChildComponent => {
       switch (this.props.state.data.icon) {
         case "partly-cloudy-day":
           return "icons8-partly-cloudy-day-96.png";
+        case "partly-cloudy-night":
+          return "icons8-night-96.png";
         default:
           return "icons8-tornado-96.png";
       }

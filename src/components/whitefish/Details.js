@@ -6,7 +6,6 @@ import renderIcon from "../renderIcon";
 
 class Details extends Component {
   render() {
-    console.log(this.props);
     return (
       <View>
         <Text>Details</Text>
@@ -15,7 +14,10 @@ class Details extends Component {
         </Text>
         <Text>Hummidy : {this.props.state.data.hourly[0].humidity}%</Text>
         <Text />
-        <Image />
+        <Image
+          style={{ height: 50, width: 50 }}
+          source={require(`../../icons/${this.props.renderIcon}`)}
+        />
       </View>
     );
   }
