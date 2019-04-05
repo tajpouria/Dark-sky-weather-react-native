@@ -3,13 +3,17 @@ import { connect } from "react-redux";
 
 export default ChildComponent => {
   class ComposedComponent extends Component {
-    componentWillMount() {
-      let { hourly } = this.props.state.data;
-      let hours = [];
-      console.log(hourly);
+    constructor() {
+      super();
+      this.hours = [];
+    }
+    componentDidUpdate() {
+      const { hourly } = this.props.state.data;
+      hourly.map(item => this.hours.push(item.time));
+      return this.hours;
     }
     render() {
-      return <ChildComponent {...this.props} />;
+      return <ChildComponent {...this.props} hours={this.hours} />;
     }
   }
 

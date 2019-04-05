@@ -8,6 +8,9 @@ import hoursData from "./hoursData";
 import renderIcon from "../renderIcon";
 
 class Forecast extends Component {
+  async hours() {
+    return await this.props.hours;
+  }
   render() {
     return (
       <View>
@@ -16,7 +19,7 @@ class Forecast extends Component {
           data={[1, 2, 3, 4, 5, 6]}
           renderItem={({ item }) => (
             <HourTile
-              date={1554453000}
+              date={this.hours().then(val => console.log(val))}
               src={require(`../../icons/${this.props.renderIcon}`)}
             />
           )}
