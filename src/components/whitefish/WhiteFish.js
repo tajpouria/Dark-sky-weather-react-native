@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 
 import Forecast from "./Forecast";
 import WeekDays from "./WeekDays";
+import Details from "./Details";
 
 export default class WhiteFish extends Component {
   render() {
@@ -12,7 +13,8 @@ export default class WhiteFish extends Component {
         <Text> ........................................... </Text>
         {/* <Forecast /> */}
         <Text>---------------------------------------------------</Text>
-        <WeekDays />
+        {/* <WeekDays /> */}
+        <Details />
       </View>
     );
   }
