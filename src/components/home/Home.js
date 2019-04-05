@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { connect } from "react-redux";
 
-import RenderIcon from "../RenderIcon";
+import renderIcon from "../renderIcon";
 
 class Home extends Component {
   render() {
@@ -28,7 +28,15 @@ class Home extends Component {
         <Text>tempratue::{temperature}</Text>
         <Text>min temp::{apparentTemperatureMax}</Text>
         <Text>max temp::{apparentTemperatureMin}</Text>
-        <RenderIcon />
+        <Image
+          // TODO
+          // style should to cleaner
+          // default render icon spinner or sth like that
+          // maye RenderIcon comp should  change to hoc
+
+          style={{ height: 50, width: 50 }}
+          source={require(`../../icons/${this.props.renderIcon}`)}
+        />
       </View>
     );
   }
@@ -38,4 +46,4 @@ const mapStateToProps = state => {
   return { state };
 };
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(renderIcon(Home));
