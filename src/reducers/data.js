@@ -1,5 +1,9 @@
 import { C } from "../actions/types";
+
+// TODO add appropirate loading..
+
 const INITIAL_STATE = {
+  daily: "Loading...",
   hourly: "Loding...",
   city: "Loading...",
   icon: "Loading...",
@@ -10,6 +14,7 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case C:
       state = {
+        daily: action.payload.daily.data,
         hourly: action.payload.hourly.data,
         city: action.payload.timezone,
         icon: action.payload.currently.icon,
