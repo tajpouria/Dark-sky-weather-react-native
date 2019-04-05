@@ -1,5 +1,6 @@
 import { C } from "../actions/types";
 const INITIAL_STATE = {
+  hourly: "Loding...",
   city: "Loading...",
   icon: "Loading...",
   temperature: "Loading.."
@@ -9,6 +10,7 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case C:
       state = {
+        hourly: action.payload.hourly.data,
         city: action.payload.timezone,
         icon: action.payload.currently.icon,
         temperature: action.payload.currently.temperature,
