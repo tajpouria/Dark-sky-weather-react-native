@@ -10,7 +10,7 @@ class WeekDay extends Component {
     return (
       <View>
         <FlatList
-          data={[0, 1, 2, 3, 4]}
+          data={[1, 2, 3, 4, 5]}
           renderItem={({ item }) => (
             <DayTile
               icon={this.props.state.data.daily[item].icon}

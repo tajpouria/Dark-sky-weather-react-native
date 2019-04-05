@@ -12,10 +12,10 @@ class HourTile extends Component {
   render() {
     return (
       <View>
-        <Text>{this.unixTimeConvetor(this.props.date)}</Text>
+        <Text>{this.unixTimeConvetor(this.props.date).slice(0, 4)}</Text>
         <Image style={{ height: 50, width: 50 }} source={this.props.src} />
-        <Text>{this.props.maxtemprature}</Text>
-        <Text>{this.props.mintemprature}</Text>
+        <Text>{Math.round(this.props.maxtemprature)}</Text>
+        <Text>{Math.round(this.props.mintemprature)}</Text>
       </View>
     );
   }

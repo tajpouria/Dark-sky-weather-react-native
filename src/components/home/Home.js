@@ -23,9 +23,9 @@ class Home extends Component {
         5- powered by dark cload should be added 
         */}
         <Text>city::{city}</Text>
-        <Text>tempratue::{temperature}</Text>
-        <Text>min temp::{apparentTemperatureMax}</Text>
-        <Text>max temp::{apparentTemperatureMin}</Text>
+        <Text>tempratue::{Math.round(temperature)}</Text>
+        <Text>max temp::{Math.round(apparentTemperatureMax)}</Text>
+        <Text>min temp::{Math.round(apparentTemperatureMin)}</Text>
         <Image
           // TODO
           // style should to cleaner

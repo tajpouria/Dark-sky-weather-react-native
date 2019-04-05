@@ -11,7 +11,7 @@ class Forecast extends Component {
       <View>
         <Text> Forecast </Text>
         <FlatList
-          data={[0, 1, 2, 3, 4, 5]}
+          data={[0, 1, 2, 4, 6, 8]}
           renderItem={({ item }) => (
             <HourTile
               temprature={this.props.state.data.hourly[item].temperature}
