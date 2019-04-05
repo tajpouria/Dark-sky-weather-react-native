@@ -7,6 +7,7 @@ import renderIcon from "../renderIcon";
 
 class Forecast extends Component {
   render() {
+    console.log(this.props);
     return (
       <View>
         <Text> Forecast </Text>
@@ -14,6 +15,7 @@ class Forecast extends Component {
           data={[0, 1, 2, 3, 4, 5]}
           renderItem={({ item }) => (
             <HourTile
+              temprature={this.props.state.data.hourly[item].temperature}
               date={this.props.state.data.hourly[item].time}
               src={require(`../../icons/${this.props.renderIcon}`)}
             />

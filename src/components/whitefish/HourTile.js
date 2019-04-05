@@ -12,6 +12,7 @@ export default class HourTile extends Component {
       <View>
         <Text>{this.unixTimeConvetor(this.props.date)}</Text>
         <Image style={{ height: 50, width: 50 }} source={this.props.src} />
+        <Text>{this.props.temprature}</Text>
       </View>
     );
   }

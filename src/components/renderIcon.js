@@ -5,6 +5,8 @@ export default ChildComponent => {
   class ComposedComponent extends Component {
     renderIcon() {
       switch (this.props.state.data.icon) {
+        case "partly-cloudy-day":
+          return "icons8-partly-cloudy-day-96.png";
         default:
           return "icons8-tornado-96.png";
       }
