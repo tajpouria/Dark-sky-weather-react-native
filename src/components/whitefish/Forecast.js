@@ -14,6 +14,7 @@ class Forecast extends Component {
           data={[0, 1, 2, 4, 6, 8]}
           renderItem={({ item }) => (
             <HourTile
+              icon={this.props.state.data.hourly[item].icon}
               temprature={this.props.state.data.hourly[item].temperature}
               date={this.props.state.data.hourly[item].time}
               src={require(`../../icons/${this.props.renderIcon}`)}

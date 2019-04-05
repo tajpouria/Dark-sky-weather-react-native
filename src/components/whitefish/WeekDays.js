@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, FlatList } from "react-native";
 import { connect } from "react-redux";
-import renderIcon from "../renderIcon";
 
 import DayTile from "./DayTile";
 
@@ -21,7 +20,6 @@ class WeekDay extends Component {
                 this.props.state.data.daily[item].apparentTemperatureMin
               }
               date={this.props.state.data.daily[item].time}
-              src={require(`../../icons/${this.props.renderIcon}`)}
             />
           )}
           keyExtractor={item => item.toString()}
@@ -35,4 +33,4 @@ const mapStateToProps = state => {
   return { state };
 };
 
-export default connect(mapStateToProps)(renderIcon(WeekDay));
+export default connect(mapStateToProps)(WeekDay);

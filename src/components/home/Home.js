@@ -2,10 +2,19 @@ import React, { Component } from "react";
 import { View, Text, Image } from "react-native";
 import { connect } from "react-redux";
 
-import renderIcon from "../renderIcon";
-
 class Home extends Component {
+  renderImage() {
+    switch (this.props.state.data.icon) {
+      case "partly-cloudy-night":
+        return "icons8-night-96.png";
+      case "cloudy":
+        return "icons8-partly-cloudy-day-96.png";
+      default:
+        return "icons8-rainbow-96.png";
+    }
+  }
   render() {
+    console.log(this.props);
     const {
       city,
       temperature,
@@ -33,7 +42,7 @@ class Home extends Component {
           // maye RenderIcon comp should  change to hoc
 
           style={{ height: 50, width: 50 }}
-          source={require(`../../icons/${this.props.renderIcon}`)}
+          source={require(`../../icons/${this.renderImage()}`)}
         />
       </View>
     );
@@ -44,4 +53,4 @@ const mapStateToProps = state => {
   return { state };
 };
 
-export default connect(mapStateToProps)(renderIcon(Home));
+export default connect(mapStateToProps)(Home);
