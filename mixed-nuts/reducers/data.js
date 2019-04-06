@@ -7,18 +7,20 @@ const INITIAL_STATE = {
   hourly: "Loding...",
   city: "Loading...",
   icon: "Loading...",
-  temperature: "Loading.."
+  temperature: "Loading...",
+  summary : "Loading..."
 };
 
 export default (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case C:
-	console.log(action.payload)
+  
+  switch (action.type){
+    case C: 
       state = {
         daily: action.payload.daily.data,
         hourly: action.payload.hourly.data,
         city: action.payload.timezone,
         icon: action.payload.currently.icon,
+        summary: action.payload.currently.summary,
         temperature: action.payload.currently.temperature,
         apparentTemperatureMax:
           action.payload.daily.data[0].apparentTemperatureMax,
