@@ -13,5 +13,3 @@ export const dataAction = () => {
       .catch(err => console.log(err));
   };
 };
-
-// TODO error handeling 

@@ -13,7 +13,6 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case C:
-	console.log(action.payload)
       state = {
         daily: action.payload.daily.data,
         hourly: action.payload.hourly.data,

@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   forecastText: {
     fontSize: 18,
     color: 'rgba(240,240,240,0.6)',
-    marginBottom: 7,
+    marginBottom: 5,
     marginTop: 7,
     marginLeft: 7,
   },

@@ -10,6 +10,7 @@ import ScrollableTabView, {
 import Clock from './Clock';
 import TodayTab from './TodayTab';
 import Forecast from './Forecast';
+import Details from './Details'
 
 class Home extends Component {
   render() {
@@ -37,8 +38,9 @@ class Home extends Component {
           <View key={'1'} tabLabel={'Today'}>
             <TodayTab />
           </View>
-          <View key={'2'} tabLabel={'5 Days '}>
+          <View key={'2'} style={styles.forecastAndDetailContainer} tabLabel={'5 Days '}>
             <Forecast />
+            <Details />
           </View>
         </ScrollableTabView>
       </ImageBackground>
@@ -66,6 +68,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.7)',
     borderRadius: 50,
   },
+  forecastAndDetailContainer:{
+    justifyContent : 'space-between'
+  }
 });
 
 const mapStateToProps = state => {
