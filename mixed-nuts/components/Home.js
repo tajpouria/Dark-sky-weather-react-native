@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
   },
   underlineStyle: {
-    backgroundColor: 'rgba(255,255,255,0.7)',
+    backgroundColor: 'rgba(255,255,254,0.7)',
     borderRadius: 50,
   },
   forecastAndDetailContainer:{

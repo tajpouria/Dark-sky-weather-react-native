@@ -25,7 +25,7 @@ class Forecast extends Component {
       <View style={styles.forecastContainer}>
         <Text style={styles.forecastText}> Forecast </Text>
         <View style={styles.hourTileContainer}>{this.renderHours()}</View>
-              <FlatList
+        <FlatList
           data={[1, 2, 3, 4, 5]}
           renderItem={({ item }) => (
             <DayTile
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     color: 'rgba(240,240,240,0.6)',
     marginBottom: 5,
     marginTop: 7,
-    marginLeft: 7,
+    marginLeft: 6,
   },
   hourTileContainer: {
     flexDirection: 'row',
